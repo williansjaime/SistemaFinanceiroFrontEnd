@@ -1,6 +1,10 @@
 # SistemaFinanceiroFrontEnd
-FrontEnd para o sistema financeiro pessoal e controle de gastos e investimentos
+FrontEnd para o sistema financeiro pessoal e controle de gastos e investimentos \n
 Objetivo desse sistema é para realizar melhor a gestão dos recursos financeiros pessoais e controle de notas
+1- Entrada de despesas pessoais
+2- Entrada de receitas pessoais
+3- Valores de investimentos pessoais (atualizados diariamente)
+
 
 # Sistemafinanceiro
 
