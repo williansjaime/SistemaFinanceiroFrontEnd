@@ -1,10 +1,10 @@
 <!-- Page Wrapper -->
 <div id="wrapper" style="background-color: #224bbe;">   
-    <div *ngIf="urlRetorno != '/header/simuladorplanejamento';" >
+    <div>
         <ul [ngClass]="{'toggled': isSidebarToggled}" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="mx-3" (click)="ToggleSidebar()">
-                    <img width="50px"  src="">
+                    <img width="60px"  src="assets/image/logo.png">
                 </div>
             </a>
             <div>
@@ -18,14 +18,14 @@
                 <li class="nav-item">
                     <a class="nav-link" (click)="atualisarRoute('/header/cadastro')" routerLink="/header/cadastro" >
                         <i class="fas fa-fw fa-chart-pie"></i>
-                        <span>Gastos</span>
+                        <span>Despesas</span>
                     </a>
                 </li>   
                 <!-- Nav Item - Editar Projeto-->
                 <li class="nav-item">
                     <a class="nav-link" (click)="atualisarRoute('/header/ganhos')" routerLink="/header/ganhos" >
                         <i class="fas fa-fw fa-money-bill-wave"></i>
-                        <span>Ganhos</span>
+                        <span>Receitas</span>
                     </a>
                 </li>              
                 <li class="nav-item" (click)="atualisarRoute('/header/investimentos')" routerLink="/header/investimentos" >
@@ -33,7 +33,19 @@
                         <i class="fas fa-fw fa-chart-area"></i>
                         <span>Investimentos</span>
                     </a>
-                </li>                                                           
+                </li> 
+                <li class="nav-item" (click)="atualisarRoute('/header/processos')" routerLink="/header/processos" >
+                    <a class="nav-link">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>Processos</span>
+                    </a>
+                </li> 
+                <li class="nav-item" (click)="atualisarRoute('/header/IR')" routerLink="/header/IR" >
+                    <a class="nav-link">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>IR</span>
+                    </a>
+                </li>                                                          
             </div>
             <hr class="sidebar-divider d-none d-md-block">            
             <!--div class="text-center d-none d-md-inline">

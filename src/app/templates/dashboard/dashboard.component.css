@@ -1,0 +1,108 @@
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-primary {
+    color: #49a7dd !important;
+  }
+  
+  a.text-primary:hover, a.text-primary:focus {
+    color: #224abe !important;
+  }
+  
+  .text-secondary {
+    color: #858796 !important;
+  }
+  
+  a.text-secondary:hover, a.text-secondary:focus {
+    color: #60616f !important;
+  }
+  
+  .text-success {
+    color: #1cc88a !important;
+  }
+  
+  a.text-success:hover, a.text-success:focus {
+    color: #13855c !important;
+  }
+  
+  .text-info {
+    color: #36b9cc !important;
+  }
+  
+  a.text-info:hover, a.text-info:focus {
+    color: #258391 !important;
+  }
+  
+  .text-warning {
+    color: #f6c23e !important;
+  }
+  
+  a.text-warning:hover, a.text-warning:focus {
+    color: #dda20a !important;
+  }
+  
+  .text-danger {
+    color: #e74a3b !important;
+  }
+  
+  a.text-danger:hover, a.text-danger:focus {
+    color: #be2617 !important;
+  }
+  
+  .text-light {
+    color: #f8f9fc !important;
+  }
+  
+  a.text-light:hover, a.text-light:focus {
+    color: #c2cbe5 !important;
+  }
+  
+  .text-dark {
+    color: #5a5c69 !important;
+  }
+  
+  a.text-dark:hover, a.text-dark:focus {
+    color: #373840 !important;
+  }
+  
+  .text-body {
+    color: #858796 !important;
+  }
+  
+  .text-muted {
+    color: #858796 !important;
+  }
+  
+  .text-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+.no-helmet-icon {
+  border: 2px solid red; /* Contorno vermelho */
+  height: 31px; /* Ajuste o tamanho conforme necessário */
+  width: auto; /* Mantém a proporção da imagem */
+  vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+}
+
+/* months-list.component.css */
+.months-container {
+  display: flex;
+  flex-wrap: wrap; /* Faz com que os botões vão para a próxima linha se não couberem */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.btn {
+  flex: 0 0 auto; /* Impede que os botões se estiquem */
+  margin: 5px;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+}

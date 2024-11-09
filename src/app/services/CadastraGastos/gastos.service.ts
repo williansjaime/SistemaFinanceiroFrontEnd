@@ -19,7 +19,7 @@ export class GastosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           },
         };
-        const data = await fetch(this.apiUrl+"/api/v1/gastos",requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/tags/0",requestOptions)
             .then(response => response.json());
         return data;
       } catch (error) {
@@ -27,7 +27,7 @@ export class GastosService {
       } 
   }
 
-  async GET(){
+  async GET(id:number){
     try{
         const requestOptions = {
           method: 'GET',
@@ -36,7 +36,7 @@ export class GastosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           },
         };
-        const data = await fetch(this.apiUrl+"/api/v1/gastos/1",requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/despesas/"+id,requestOptions)
             .then(response => response.json());
         return data;
       } catch (error) {
@@ -55,7 +55,7 @@ export class GastosService {
           },
           body: JSON.stringify(dataJSON)
         };
-        const data = await fetch(this.apiUrl+"/api/v1/gastos", requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/despesas", requestOptions)
         .then(response => response.json());
         return data;
     } catch (error) {
@@ -74,7 +74,7 @@ export class GastosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           }
         };
-        const data = await fetch(this.apiUrl+"/api/v1/gastos/"+id, requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/despesas/"+id, requestOptions)
         .then(response => response.json());
         return data;
     } catch (error) {
@@ -82,13 +82,3 @@ export class GastosService {
     }  
   }
 }
-
-// import { Injectable } from '@angular/core';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class GastosService {
-
-//   constructor() { }
-// }

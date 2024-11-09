@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
+
+
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -9,7 +11,7 @@ import { Router} from '@angular/router';
 export class HeaderComponent {
   urlRetorno:string="";  
   authToken:any = null;
-  user:string = "";
+  user:string = "/header/dashboard";
   cabecalho:string = "";
   isSidebarToggled: boolean = false;
 
@@ -20,14 +22,19 @@ export class HeaderComponent {
     this.cabecalho = "";
   }
 
+  //#20f065 cor inicial
+  //#040402 cor final
+
   atualisarRoute(url:string){
       this.urlRetorno="";
       this.urlRetorno = url;
       this.cabecalho = "";
       if(url == '/header/dashboard'){this.cabecalho = "Dashboard"}
-      if(url == '/header/cadastro'){this.cabecalho = "Cadastro de Gastos"}
-      if(url == '/header/ganhos'){this.cabecalho = "Ganhos"}
+      if(url == '/header/cadastro'){this.cabecalho = "Cadastro de Despesas"}
+      if(url == '/header/ganhos'){this.cabecalho = "Cadastro de Receitas"}
       if(url == '/header/investimentos'){this.cabecalho = "Investimentos"}
+      if(url == '/header/processos'){this.cabecalho = "Processos"}
+      if(url == '/header/IR'){this.cabecalho = "Imposto de Renda"}
   }
 
   DoLogout() {
@@ -68,17 +75,3 @@ export class HeaderComponent {
 
 }
 
-
-
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-header',
-//   standalone: true,
-//   imports: [],
-//   templateUrl: './header.component.html',
-//   styleUrl: './header.component.css'
-// })
-// export class HeaderComponent {
-
-// }

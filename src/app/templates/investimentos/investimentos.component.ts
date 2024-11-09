@@ -18,7 +18,7 @@ export class InvestimentosComponent {
   lista_investimentos:Investimentos[] = [];
   lista_investimentos_post:Investimentos[] = [];
   lista_tags_name:Tags[] = [];
-  //selectedTag: number | string;
+  //selectedTag: number | string; 
 
   constructor(private investimentos_services: InvestimentosService){ 
     this.get_gastos();
@@ -56,16 +56,19 @@ export class InvestimentosComponent {
 
   salvar_investimento(){
     
-    const valor = document.getElementById(('idValor'))  as HTMLInputElement || null;
+    const valor = document.getElementById(('idUnitario'))  as HTMLInputElement || null;
     const descricaoGasto = document.getElementById(('idDescricao'))  as HTMLInputElement || null;
     const tagGastos= document.getElementById(('tags'))  as HTMLInputElement || null;
     const ticket= document.getElementById(('idTicket'))  as HTMLInputElement || null;
-    if(valor!= null && descricaoGasto != null && tagGastos !=null && ticket != null)
+    const idQuantidade= document.getElementById(('idQuantidade'))  as HTMLInputElement || null;
+    if(valor!= null && descricaoGasto != null && tagGastos !=null && ticket != null && idQuantidade != null)
     {
       this.lista_investimentos_post[0] = {
         id:0,
+        valorUnitario:valor.value,
+        Quantidade:Number(idQuantidade.value),
         tagInvestimento:tagGastos.value,
-        valorTotal:valor.value,
+        valorTotal:String(Number(idQuantidade.value) * Number(valor.value)),
         descricaoInvestimento:descricaoGasto.value,
         ticket:ticket.value,
         dataCadastro:"",

@@ -1,4 +1,4 @@
-export interface Investimentos
+export interface Dashboard
 {
     id:number;
     valorUnitario:string;
@@ -10,4 +10,3 @@ export interface Investimentos
     descricaoInvestimento:string; 
     valorAtual:number;
 }
-                    

@@ -1,0 +1,88 @@
+/* months-list.component.css */
+.months-container {
+    display: flex;
+    flex-wrap: wrap; /* Faz com que os botões vão para a próxima linha se não couberem */
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .btn {
+    flex: 0 0 auto; /* Impede que os botões se estiquem */
+    margin: 5px;
+  }
+  
+  .fixTableHead {
+    overflow-y: auto;
+    height: 76vh; /* 50% da altura da tela */
+    max-height: 90vh; /* Limite máximo de 80% da altura da tela */
+  }
+  
+  .fixTableHead thead th {
+    position: sticky;
+    top: 0;
+  }
+  table {
+    border-collapse: collapse;   
+    border: 1px solid #f3f3f3;     
+    width: 100%;
+  }
+  
+  th {
+    background: #49a7dd;
+  }
+
+td,th {
+    text-align: center;
+}
+
+/*style="display: fixed;"*/
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 10px solid #49a7dd;
+  border-top-color: #000000;
+  animation: spinner .8s linear infinite;
+}
+
+.footer {
+  background-color: #49a7dd;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1.75rem;
+  margin-left: -0.75rem;
+}
+
+.modal-body {
+  word-break: break-all;
+}

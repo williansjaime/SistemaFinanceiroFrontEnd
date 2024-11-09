@@ -6,4 +6,6 @@ export interface CadastroGastos
     parcelas:string;
     descricaoGasto:string; 
     dataCadastro:string;
+    quantidade:string;
+    notaFiscal:number;
 }

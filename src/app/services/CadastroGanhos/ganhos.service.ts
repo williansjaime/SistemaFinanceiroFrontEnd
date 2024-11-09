@@ -19,7 +19,7 @@ export class GanhosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           },
         };
-        const data = await fetch(this.apiUrl+"/api/v1/ganhos",requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/tags/1",requestOptions)
             .then(response => response.json());
         return data;
       } catch (error) {
@@ -27,7 +27,7 @@ export class GanhosService {
       } 
   }
 
-  async GET(){
+  async GET(id:number){
     try{
         const requestOptions = {
           method: 'GET',
@@ -36,7 +36,7 @@ export class GanhosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           },
         };
-        const data = await fetch(this.apiUrl+"/api/v1/ganhos/1",requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/receitas/"+id,requestOptions)
             .then(response => response.json());
         return data;
       } catch (error) {
@@ -55,7 +55,7 @@ export class GanhosService {
           },
           body: JSON.stringify(dataJSON)
         };
-        const data = await fetch(this.apiUrl+"/api/v1/ganhos", requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/receitas", requestOptions)
         .then(response => response.json());
         return data;
     } catch (error) {
@@ -74,7 +74,7 @@ export class GanhosService {
               'Access-Control-Allow-Origin': 'http://localhost:4200'
           }
         };
-        const data = await fetch(this.apiUrl+"/api/v1/ganhos/"+id, requestOptions)
+        const data = await fetch(this.apiUrl+"/api/v1/receitas/"+id, requestOptions)
         .then(response => response.json());
         return data;
     } catch (error) {

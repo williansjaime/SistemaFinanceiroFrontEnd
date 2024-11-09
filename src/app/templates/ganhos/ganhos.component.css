@@ -1,0 +1,12 @@
+/* months-list.component.css */
+.months-container {
+    display: flex;
+    flex-wrap: wrap; /* Faz com que os botões vão para a próxima linha se não couberem */
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .btn {
+    flex: 0 0 auto; /* Impede que os botões se estiquem */
+    margin: 5px;
+  }
+  

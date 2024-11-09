@@ -9,6 +9,8 @@ import { CadastroComponent } from './templates/cadastro/cadastro.component';
 import { LoginComponent } from './templates/login/login.component';
 import { GanhosComponent } from './templates/ganhos/ganhos.component';
 import { InvestimentosComponent } from './templates/investimentos/investimentos.component';
+import { ProcessosComponent } from './templates/processos/processos.component';
+import { ImpostoRendaComponent } from './templates/imposto-renda/imposto-renda.component';
 
 
 
@@ -29,6 +31,8 @@ const routes: Routes = [
     { path:'cadastro', component: CadastroComponent},
     { path:'ganhos', component: GanhosComponent},
     { path:'investimentos', component: InvestimentosComponent},
+    { path:'processos', component: ProcessosComponent},
+    {path:'IR',component:ImpostoRendaComponent},
     ]
   }
   ];

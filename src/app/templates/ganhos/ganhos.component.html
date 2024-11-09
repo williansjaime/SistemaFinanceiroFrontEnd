@@ -1,4 +1,10 @@
 <div class="container-fluid">  
+    <!-- months-list.component.html -->
+    <div class="months-container">
+        <button class="btn btn-custom-gray" *ngFor="let month of months; let i = index" (click)="get_receitas_mes(i)">
+        {{ month }}
+        </button>
+    </div>
     <table class="table table-striped table-hover">   
         <thead>
             <tr>
@@ -52,6 +58,10 @@
                     <div class="form-group">
                         <label for="editableLabel">Valor</label>
                         <input class="form-control" step=".01" type="number" id="idvalor">
+                    </div>
+                    <div class="form-group">
+                        <label for="editableLabel">Data</label>
+                        <input class="form-control" step=".01" type="date" id="iddata">
                     </div>
                     <div class="form-group">
                         <label for="editableLabel">Descrição</label>
